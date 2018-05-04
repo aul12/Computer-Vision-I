@@ -1,6 +1,8 @@
 sudo: required
 dist: trusty
 before_install:
+    - sudo add-apt-repository ppa:octave/stable
+    - sudo apt-get update
     - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-doc-de pgf texlive-font-utils zip octave epstool gnuplot
     - octave --eval "pkg install -forge image"
     - octave --eval "pkg load image"
