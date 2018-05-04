@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/aul12/Computer-Vision-I.svg?branch=master)](https://travis-ci.org/aul12/Computer-Vision-I)
 # Computer Vision I
 Lösungen zu den Übungsblättern der Vorlesung "Computer Vision I" an der Universität Ulm.
 
