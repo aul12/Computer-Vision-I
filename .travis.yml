@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+before_install:
+    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-doc-de pgf texlive-font-utils zip
+      
+
+script:
+    - mkdir output
+    - cd Blatt01
+    - latexmk -pdf main.tex
+    - mv main.pdf ../output/Blatt01.pdf
+    - cd ..
+    - zip -j output/Blatt01.zip output/Blatt01.pdf 
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+    keep-history: true
+    local-dir: output
+    on:
+        branch: master

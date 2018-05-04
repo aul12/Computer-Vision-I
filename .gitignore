@@ -1,0 +1,7 @@
+*.log
+*.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+*.pdf
+*/octave-workspace
