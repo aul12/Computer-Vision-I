@@ -3,9 +3,8 @@ dist: trusty
 before_install:
     - sudo add-apt-repository -y  ppa:octave/stable
     - sudo apt-get update
-    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-doc-de pgf texlive-font-utils zip octave epstool gnuplot liboctave-dev pstoedit
+    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-doc-de pgf texlive-font-utils zip octave epstool gnuplot liboctave-dev pstoedit transfig
     - octave --eval "pkg install -forge image"
-    - octave --eval "pkg load image"
       
 
 script:
@@ -13,6 +12,7 @@ script:
     - cd Blatt01
     - octave sh01ex01.m
     - octave sh01ex01_b.m
+    - octave --eval "pkg load image"
     - octave sh01ex02.m
     - latexmk -pdf main.tex
     - mv main.pdf ../output/Blatt01.pdf
