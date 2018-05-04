@@ -38,4 +38,42 @@
 
 \begin{document}
     \maketitle
+    \section{Histogram Calculation}
+    \begin{enumerate}
+        \item Matlab-Funktion: \lstinputlisting{myHistogram.m}
+        \item Generate the plots: \lstinputlisting{sh01ex01.m}
+        \item  $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[trim = {0 9cm 27cm 0}, clip,width=\textwidth]{Histograms}
+                \caption{Plot of the histograms}
+            \end{figure} 
+        \item TODO
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[trim = {0 9cm 27cm 0}, clip,width=\textwidth]{Rows}
+                \caption{Plot of the rows}
+            \end{figure} 
+    \end{enumerate}
+    \section{Local weighting}
+    \begin{enumerate}
+        \item
+            \begin{equation*}
+                \begin{pmatrix}
+                    \cdot & \cdot & \cdot & \cdot \\
+                    1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 & -1 \cdot 1 + -1 \cdot 1 + 1 \cdot 1  & \cdot \\
+                    \cdot & \cdot & \cdot & \cdot \\
+                    \cdot & \cdot & \cdot & \cdot
+                \end{pmatrix} =
+                \begin{pmatrix}
+                    \cdot & \cdot & \cdot & \cdot \\
+                    2 & 1 & -1 & \cdot \\
+                    \cdot & \cdot & \cdot & \cdot \\
+                    \cdot & \cdot & \cdot & \cdot
+                \end{pmatrix}
+            \end{equation*}
+        \item TODO
+        \item \lstinputlisting{sh01ex02.m}
+    \end{enumerate}
 \end{document}
