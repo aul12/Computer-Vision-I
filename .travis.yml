@@ -7,10 +7,10 @@ before_install:
 script:
     - mkdir output
     - cd Blatt01
-    - latexmk -pdf main.tex
     - octave sh01ex01.m
     - octave sh01ex01_b.m
     - octave sh01ex02.m
+    - latexmk -pdf main.tex
     - mv main.pdf ../output/Blatt01.pdf
     - cd ..
     - zip -j output/Blatt01.zip output/Blatt01.pdf Blatt01/sh01ex01.m Blatt01/sh01ex01_b.m Blatt01/sh01ex02.m
