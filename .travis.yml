@@ -12,7 +12,7 @@ script:
     - cd Blatt01
     - octave sh01ex01.m
     - octave sh01ex01_b.m
-    - octave --eval "pkg load image" --persist sh01ex02.m
+    - octave sh01ex02.m
     - latexmk -pdf main.tex
     - mv Histograms.eps ../output/
     - mv Rows.eps ../output/
