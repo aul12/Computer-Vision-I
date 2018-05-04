@@ -12,9 +12,11 @@ script:
     - cd Blatt01
     - octave sh01ex01.m
     - octave sh01ex01_b.m
-    - octave --eval "pkg load image"
-    - octave sh01ex02.m
+    - octave --eval "pkg load image" --persist sh01ex02.m
     - latexmk -pdf main.tex
+    - mv Histograms.eps ../output/
+    - mv Rows.eps ../output/
+    - mv BoxFilter.eps ../output/
     - mv main.pdf ../output/Blatt01.pdf
     - cd ..
     - zip -j output/Blatt01.zip output/Blatt01.pdf Blatt01/sh01ex01.m Blatt01/sh01ex01_b.m Blatt01/sh01ex02.m
