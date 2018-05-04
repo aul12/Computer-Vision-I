@@ -48,14 +48,19 @@
                 \includegraphics[trim = {0 9cm 27cm 0}, clip,width=\textwidth]{Histograms}
                 \caption{Plot of the histograms}
             \end{figure} 
-        \item 
+        \item $ $
             \begin{figure}[H]
                 \centering
                 \begin{tikzpicture}
                     \node[anchor=south west,inner sep=0] at (0,0) {
                         \includegraphics[trim = {0 9cm 27cm 0}, clip,width=\textwidth]{Histograms}
                     };
-                    \draw[red,ultra thick,rounded corners] (7.5,5.3) rectangle (9.4,6.2);
+                    \node at (8.6,8) {\scriptsize Apple};
+                    \node at (9.5,8) {\scriptsize Orange};
+                    \node at (10.6,9) {\scriptsize Background};
+
+                    \node at (9.4,3) {\scriptsize Apples};
+                    \node at (10.6,4) {\scriptsize Background};
                 \end{tikzpicture}
                 \caption{Plot of the histograms}
             \end{figure} 
@@ -68,7 +73,7 @@
     \end{enumerate}
     \section{Local weighting}
     \begin{enumerate}
-        \item
+        \item 
             \begin{equation*}
                 \begin{pmatrix}
                     \cdot & \cdot & \cdot & \cdot \\
@@ -84,6 +89,6 @@
                 \end{pmatrix}
             \end{equation*}
         \item TODO
-        \item \lstinputlisting{sh01ex02.m}
+        \item $ $ \lstinputlisting{sh01ex02.m}
     \end{enumerate}
 \end{document}

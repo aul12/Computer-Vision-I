@@ -14,7 +14,8 @@ imshow(fruitsA);
 title('fruitsA.png');
 
 subplot(2,2,2);
-b = bar(0:255, histA);
+plot(0:255, histA);
+axis([0 255 0 0.04]);
 title('Histogramm for fruitsA.png');
 xlabel('Intensity');
 ylabel('Probability');
@@ -24,7 +25,8 @@ imshow(fruitsB);
 title('fruitsB.png');
 
 subplot(2,2,4);
-bar(0:255, histB);
+plot(0:255, histB);
+axis([0 255 0 0.05]);
 title('Histogramm for fruitsB.png');
 xlabel('Intensity');
 ylabel('Probability');
