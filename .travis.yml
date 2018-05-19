@@ -13,6 +13,11 @@ script:
     - mv main.pdf ../output/Blatt01.pdf
     - cd ..
     - zip -j output/Blatt01.zip output/Blatt01.pdf Blatt01/sh01ex01.m Blatt01/sh01ex01_b.m Blatt01/sh01ex02.m
+    - cd Blatt02
+    - latexmk -pdf --shell-escape main.tex
+    - mv main.pdf ../output/Blatt02.pdf
+    - cd ..
+    - zip -j output/Blatt01.zip output/Blatt01.pdf 
 
 deploy:
     provider: pages
