@@ -102,6 +102,30 @@
     %@TODO Do you notice any differences? Can you infer an additional property of the underlying convolution operation? 
 
     \section{Discrete Fourier Transform}
+    \subsection{}
+    \lstinputlisting[lastline=16]{sh02ex02.m}              
+    \subsection{}
+    The $u$th coefficient (starting at zero) corresponds to a frequency of
+    \begin{equation*}
+        f(u) = 2 \cdot \pi \cdot \frac{u}{N} = \frac{\pi \cdot u}{2}
+    \end{equation*}
+    \lstinputlisting[firstline=17,firstnumber=17,lastline=26]{sh02ex02.m}              
+    \begin{figure}[H]
+        \centering
+        \includegraphics[clip,width=\textwidth]{frequency.eps}
+        \caption{Output of the second part of the Matlab script}
+    \end{figure}
+    \subsection{}
+    \lstinputlisting[firstline=27,firstnumber=27,lastline=35]{sh02ex02.m}              
+    \subsection{}
+    \lstinputlisting[firstline=36,firstnumber=36]{sh02ex02.m}              
+    \begin{figure}[H]
+        \centering
+        \includegraphics[trim = {0 8cm 27cm 0}, clip,width=\textwidth]{transforms.eps}
+        \caption{Output of the last part of the Matlab script}
+    \end{figure}
+    %@TODO is  die rekonstruktion wirklich so schlecht?
 
     \section{Fourier Transform for Image Quality Assessment}
+    \subsection{}
 \end{document}
