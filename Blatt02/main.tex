@@ -41,7 +41,65 @@
     \maketitle
     \section{Filter Algebra}
     \subsection{}
-    The Maximum Value is $1275$, the minimum value is $-1275$  
+    Without loss of generality choose an image $I \in [0,255]$ with size $3 \times 3$. 
+    
+    The maximum value for $I_{22}$ is achieved by weighting all positive values in the filter with $255$ and all negativ values with $0$. This results in image \eqref{eq:imgMax}. With this image the maximum output value is $2 \cdot 255 + 2 \cdot 255 + 1 \cdot 255 = 1275$.
+    \begin{equation}
+        \label{eq:imgMax}
+        I_{max} = \begin{pmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & 255 \\
+            0 & 255 & 255
+        \end{pmatrix}
+    \end{equation}
+    
+    The minimum value for $I_{22}$ is achieved by weighting all positive values in the filter with $0$ and all negativ values with $255$. This results in image \eqref{eq:imgMin}. With this image the maximum output value is $-2 \cdot 255 + (-2) \cdot 255 + (-1) \cdot 255 = -1275$.
+    \begin{equation}
+        \label{eq:imgMin}
+        I_{max} = \begin{pmatrix}
+            255 & 255 & 0 \\
+            255 & 0 & 0 \\
+            0 & 0 & 0
+        \end{pmatrix}
+    \end{equation}
+
+    \subsection{}
+    \begin{eqnarray*}
+        I &=& (1\ 2) \\
+        H &=& (1\ -1) \\
+        \alpha = 255
+    \end{eqnarray*}
+    With these values calculate the convolution (the values are continued with $0$):
+    \begin{eqnarray*}
+        (\alpha \cdot I) * H &=& 
+        (255\ 255) * (1\ -1) =
+        (255\ 0\ 0) \\
+        \alpha \cdot (I * H) &=&
+        255 \cdot (1\ 1\ 0) =
+        (255\ 255\ 0) \\
+        &\Rightarrow& (\alpha \cdot I) * H  \alpha \cdot (I * H)
+    \end{eqnarray*}
+    As shown by the contradiction above the linearity does not hold for clamped values.
+
+    \subsection{}
+    Matlab Code:
+    \lstinputlisting[lastline=20]{sh02ex01.m}              
+    \begin{figure}[H]
+        \centering
+        \includegraphics[trim = {0 13cm 27cm 0}, clip,width=\textwidth]{lenaEdge1.eps}
+        \caption{Output of the Matlab script}
+    \end{figure}
+    The filter highlights strong corner in the diagonal axis (north-west to south-east) by calculating
+    an approximitation of the derivative in this direction.
+
+    \lstinputlisting[firstline=22, firstnumber=22]{sh02ex01.m}              
+    \begin{figure}[H]
+        \centering
+        \includegraphics[trim = {0 10cm 27cm 0}, clip,width=\textwidth]{lenaEdge2.eps}
+        \caption{Output of the second part of the Matlab script}
+    \end{figure}
+
+    %@TODO Do you notice any differences? Can you infer an additional property of the underlying convolution operation? 
 
     \section{Discrete Fourier Transform}
 
