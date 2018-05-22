@@ -6,11 +6,11 @@ si = [2 3 0 1];
 S = zeros(size(ti));
 f = zeros(size(ti));
 
-for u=1:N
+for u=0:(N-1)
     for t=0:(N-1)
-        S(u) += si(t+1) * exp(-2*pi*i*u/N*t);
+        S(u+1) += si(t+1) * exp(-2*pi*i*u/N*t);
     end;
-    f(u) = 2*pi*u/N;
+    f(u+1) = 2*pi*u/N;
 end;
 S ./= sqrt(N);
 
@@ -26,9 +26,9 @@ print("frequency.eps", "-depsc");
 
 %% Part c
 sr = zeros(size(ti));
-for u=1:N
+for u=0:N-1
     for t=0:(N-1)
-        sr(u) += S(t+1) * exp(2*pi*i*u/N*t);
+        sr(u+1) += S(t+1) * exp(2*pi*i*u/N*t);
     end;
 end;
 sr ./= sqrt(N);

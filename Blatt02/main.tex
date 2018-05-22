@@ -89,9 +89,10 @@
         \includegraphics[trim = {0 13cm 27cm 0}, clip,width=\textwidth]{lenaEdge1.eps}
         \caption{Output of the Matlab script}
     \end{figure}
-    The filter highlights strong corner in the diagonal axis (north-west to south-east) by calculating
+    The filter highlights strong edges in the diagonal axis (north-west to south-east) by calculating
     an approximitation of the derivative in this direction.
 
+    \subsection{}
     \lstinputlisting[firstline=22, firstnumber=22]{sh02ex01.m}              
     \begin{figure}[H]
         \centering
@@ -99,7 +100,8 @@
         \caption{Output of the second part of the Matlab script}
     \end{figure}
 
-    %@TODO Do you notice any differences? Can you infer an additional property of the underlying convolution operation? 
+    The second image looks slighly more detailed. When using clamped images the convolution producrt is no longer commutative.
+
 
     \section{Discrete Fourier Transform}
     \subsection{}
@@ -124,8 +126,19 @@
         \includegraphics[trim = {0 8cm 27cm 0}, clip,width=\textwidth]{transforms.eps}
         \caption{Output of the last part of the Matlab script}
     \end{figure}
-    %@TODO is  die rekonstruktion wirklich so schlecht?
 
     \section{Fourier Transform for Image Quality Assessment}
     \subsection{}
+    \lstinputlisting[lastline=10]{sh02ex03.m}              
+    \subsection{}
+    \lstinputlisting[firstline=11,firstnumber=11,lastline=20]{sh02ex03.m}              
+    \subsection{}
+    \lstinputlisting[firstline=21,firstnumber=21,lastline=27]{sh02ex03.m}              
+    \subsection{}
+    \lstinputlisting[firstline=28,firstnumber=28]{sh02ex03.m}              
+    \begin{figure}[H]
+        \centering
+        \includegraphics[trim = {0 8cm 27cm 0}, clip,width=\textwidth]{Quality.eps}
+        \caption{Output of the Matlab script}
+    \end{figure}
 \end{document}
