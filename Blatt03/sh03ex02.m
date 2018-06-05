@@ -47,3 +47,5 @@ title('Filter 2 in the spatial domain');
 subplot(5,2,9);
 imshow(ifft2(filtered_freq./Hfreq));
 title('Deconvolved blurred image');
+
+print('sh03ex02.eps', '-depsc');
