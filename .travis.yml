@@ -22,7 +22,7 @@ script:
     - latexmk -pdf --shell-escape main.tex
     - mv main.pdf ../output/Blatt03.pdf
     - cd ..
-    - zip -j output/Blatt03.zip output/Blatt03.pdf Blatt02/sh03ex01.m Blatt02/sh03ex02.m
+    - zip -j output/Blatt03.zip output/Blatt03.pdf Blatt03/sh03ex01.m Blatt03/sh03ex02.m
 
 deploy:
     provider: pages
