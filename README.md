@@ -11,3 +11,5 @@ Lösungen zu den Übungsblättern der Vorlesung "Computer Vision I" an der Unive
  * [Blatt03.zip](https://aul12.github.io/Computer-Vision-I/Blatt03.zip)
  * [Blatt04.pdf](https://aul12.github.io/Computer-Vision-I/Blatt04.pdf)
  * [Blatt04.zip](https://aul12.github.io/Computer-Vision-I/Blatt04.zip)
+ * [Blatt05.pdf](https://aul12.github.io/Computer-Vision-I/Blatt05.pdf)
+ * [Blatt05.zip](https://aul12.github.io/Computer-Vision-I/Blatt05.zip)
