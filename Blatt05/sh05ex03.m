@@ -1,6 +1,6 @@
 % Part 1
 basket = im2double(imread('basket.jpg'));
-thetas = [0 pi/4 pi/2];
+thetas = [0 pi/4 pi/2] * 180/pi;
 fs = [0.64 0.32 0.08];
 
 filters = cell(1,9);
@@ -33,3 +33,4 @@ figure;
 stem3(x, y, energy);
 xlabel("\theta");
 ylabel("f");
+print("sh05ex03.eps", "-depsc");
